@@ -57,6 +57,27 @@ def single_example_parser_eb(serialized_example):
     return {"sen": sen, "label": label}
 
 
+def single_example_parser_eb1(serialized_example):
+    context_features = {
+        "label": tf.io.FixedLenFeature([], tf.int64)
+    }
+
+    sequence_features = {
+        "sen": tf.io.FixedLenSequenceFeature([], tf.int64),
+    }
+
+    context_parsed, sequence_parsed = tf.io.parse_single_sequence_example(
+        serialized=serialized_example,
+        context_features=context_features,
+        sequence_features=sequence_features
+    )
+
+    sen = sequence_parsed['sen']
+    label = context_parsed['label']
+
+    return sen, label
+
+
 def batched_data(tfrecord_filename, single_example_parser, batch_size, padded_shapes, shuffle=True, buffer_size=1000):
     dataset = tf.data.TFRecordDataset(tfrecord_filename)
     if shuffle:
