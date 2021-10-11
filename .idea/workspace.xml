@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7474c18-4cb6-41c4-9f8d-b6ea2b0b711f" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/FASTTEXT_msdrop_n.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FASTTEXT_msdrop_y.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FASTTEXT_msdrop_yy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +43,7 @@
       <recent name="D:\pythonwork\Rdrop" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.FASTTEXT_msdrop_yy">
+  <component name="RunManager" selected="Python.visualize">
     <configuration name="FASTTEXT_msdrop_y" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MSdrop" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,8 +156,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.FASTTEXT_msdrop_yy" />
         <item itemvalue="Python.visualize" />
+        <item itemvalue="Python.FASTTEXT_msdrop_yy" />
         <item itemvalue="Python.FASTTEXT_msdrop_y" />
         <item itemvalue="Python.tta_msdrop_yy" />
         <item itemvalue="Python.tta_msdrop_y (1)" />
@@ -190,7 +187,8 @@
       <workItem from="1632638191707" duration="667000" />
       <workItem from="1632673202088" duration="314000" />
       <workItem from="1633848690474" duration="10482000" />
-      <workItem from="1633859311195" duration="17896000" />
+      <workItem from="1633859311195" duration="18500000" />
+      <workItem from="1633930950739" duration="3185000" />
     </task>
     <servers />
   </component>
@@ -202,33 +200,33 @@
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
     <state x="1157" y="311" key="FileChooserDialogImpl/0.0.2752.1112@0.0.2752.1112" timestamp="1631627842138" />
-    <state width="2753" height="1056" key="GridCell.Tab.0.bottom" timestamp="1633915479022">
+    <state width="2753" height="1056" key="GridCell.Tab.0.bottom" timestamp="1633916085909">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2753" height="1056" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1633915479022" />
-    <state width="2753" height="1056" key="GridCell.Tab.0.center" timestamp="1633915479022">
+    <state width="2753" height="1056" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1633916085909" />
+    <state width="2753" height="1056" key="GridCell.Tab.0.center" timestamp="1633916085908">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2753" height="1056" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1633915479022" />
-    <state width="2753" height="1056" key="GridCell.Tab.0.left" timestamp="1633915479022">
+    <state width="2753" height="1056" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1633916085908" />
+    <state width="2753" height="1056" key="GridCell.Tab.0.left" timestamp="1633916085908">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2753" height="1056" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1633915479022" />
-    <state width="2753" height="1056" key="GridCell.Tab.0.right" timestamp="1633915479022">
+    <state width="2753" height="1056" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1633916085908" />
+    <state width="2753" height="1056" key="GridCell.Tab.0.right" timestamp="1633916085909">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2753" height="1056" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1633915479022" />
-    <state x="878" y="200" key="SettingsEditor" timestamp="1631602457027">
+    <state width="2753" height="1056" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1633916085909" />
+    <state x="878" y="200" key="SettingsEditor" timestamp="1633931332159">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="878" y="200" key="SettingsEditor/0.0.2752.1112@0.0.2752.1112" timestamp="1631602457027" />
+    <state x="878" y="200" key="SettingsEditor/0.0.2752.1112@0.0.2752.1112" timestamp="1633931332159" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MSdrop$visualize.coverage" NAME="visualize Coverage Results" MODIFIED="1633915098192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MSdrop$visualize.coverage" NAME="visualize Coverage Results" MODIFIED="1633934170721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Rdrop$tta_rdrop_n.coverage" NAME="tta_rdrop_n Coverage Results" MODIFIED="1631682396814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Rdrop$test.coverage" NAME="test Coverage Results" MODIFIED="1631673114273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MSdrop$tta_msdrop_n__1_.coverage" NAME="tta_msdrop_n (1) Coverage Results" MODIFIED="1633868673650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MSdrop$FASTTEXT_msdrop_yy.coverage" NAME="FASTTEXT_msdrop_yy Coverage Results" MODIFIED="1633915500753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MSdrop$FASTTEXT_msdrop_yy.coverage" NAME="FASTTEXT_msdrop_yy Coverage Results" MODIFIED="1633931776532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MSdrop$tta_msdrop_y__1_.coverage" NAME="tta_msdrop_y (1) Coverage Results" MODIFIED="1633871341289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MSdrop$FASTTEXT_msdrop_y.coverage" NAME="FASTTEXT_msdrop_y Coverage Results" MODIFIED="1633912148255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Rdrop$tta_rdrop_y.coverage" NAME="tta_rdrop_y Coverage Results" MODIFIED="1631700869685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

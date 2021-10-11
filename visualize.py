@@ -23,7 +23,7 @@ def visualize_PRF():
     plt.grid()
     plt.title('loss')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits','with MSDropLoss'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 0])
     plt.plot(history_n["val_loss"])
@@ -32,7 +32,7 @@ def visualize_PRF():
     plt.grid()
     plt.title('val_loss')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits','with MSDropLoss'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[0, 1])
     plt.plot(history_n["acc"])
@@ -41,7 +41,7 @@ def visualize_PRF():
     plt.grid()
     plt.title('acc')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits','with MSDropLoss'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 1])
     plt.plot(history_n["val_acc"])
@@ -50,7 +50,7 @@ def visualize_PRF():
     plt.grid()
     plt.title('val_acc')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits','with MSDropLoss'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.suptitle("Model Metrics")
 
@@ -66,7 +66,7 @@ def visualize_PRF():
     plt.grid()
     plt.title('precision')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits','with MSDropLoss'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 0])
     plt.plot(history_n["val_precision"])
@@ -75,7 +75,7 @@ def visualize_PRF():
     plt.grid()
     plt.title('val_precision')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits','with MSDropLoss'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[0, 1])
     plt.plot(history_n["recall"])
@@ -84,7 +84,7 @@ def visualize_PRF():
     plt.grid()
     plt.title('recall')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits','with MSDropLoss'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 1])
     plt.plot(history_n["val_recall"])
@@ -93,7 +93,7 @@ def visualize_PRF():
     plt.grid()
     plt.title('val_recall')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits','with MSDropLoss'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[0, 2])
     plt.plot(history_n["f1"])
@@ -102,7 +102,7 @@ def visualize_PRF():
     plt.grid()
     plt.title('f1')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits','with MSDropLoss'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 2])
     plt.plot(history_n["val_f1"])
@@ -111,12 +111,13 @@ def visualize_PRF():
     plt.grid()
     plt.title('val_f1')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits','with MSDropLoss'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.suptitle("Model Metrics")
 
     plt.tight_layout()
     plt.savefig("msdrop_PRF.jpg", dpi=1000, bbox_inches="tight")
+
 
 def visualize_FT_PRF():
     with open("modelfiles/fasttext_msdrop_n/history.txt", "r", encoding="utf-8") as fr:
@@ -127,38 +128,46 @@ def visualize_FT_PRF():
         history_y = fr.read()
         history_y = eval(history_y)
 
+    with open("modelfiles/fasttext_msdrop_yy_8/history.txt", "r", encoding="utf-8") as fr:
+        history_yy = fr.read()
+        history_yy = eval(history_yy)
+
     gs = gridspec.GridSpec(2, 2)
     plt.subplot(gs[0, 0])
     plt.plot(history_n["loss"])
     plt.plot(history_y["loss"])
+    plt.plot(history_yy["loss"])
     plt.grid()
     plt.title('loss')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 0])
     plt.plot(history_n["val_loss"])
     plt.plot(history_y["val_loss"])
+    plt.plot(history_yy["val_loss"])
     plt.grid()
     plt.title('val_loss')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[0, 1])
     plt.plot(history_n["acc"])
     plt.plot(history_y["acc"])
+    plt.plot(history_yy["acc"])
     plt.grid()
     plt.title('acc')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 1])
     plt.plot(history_n["val_acc"])
     plt.plot(history_y["val_acc"])
+    plt.plot(history_yy["val_acc"])
     plt.grid()
     plt.title('val_acc')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.suptitle("Model Metrics")
 
@@ -170,50 +179,56 @@ def visualize_FT_PRF():
     plt.subplot(gs[0, 0])
     plt.plot(history_n["precision"])
     plt.plot(history_y["precision"])
+    plt.plot(history_yy["precision"])
     plt.grid()
     plt.title('precision')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 0])
     plt.plot(history_n["val_precision"])
     plt.plot(history_y["val_precision"])
+    plt.plot(history_yy["val_precision"])
     plt.grid()
     plt.title('val_precision')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[0, 1])
     plt.plot(history_n["recall"])
     plt.plot(history_y["recall"])
+    plt.plot(history_yy["recall"])
     plt.grid()
     plt.title('recall')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 1])
     plt.plot(history_n["val_recall"])
     plt.plot(history_y["val_recall"])
+    plt.plot(history_yy["val_recall"])
     plt.grid()
     plt.title('val_recall')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[0, 2])
     plt.plot(history_n["F1"])
     plt.plot(history_y["F1"])
+    plt.plot(history_yy["f1"])
     plt.grid()
     plt.title('F1')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 2])
     plt.plot(history_n["val_F1"])
     plt.plot(history_y["val_F1"])
+    plt.plot(history_yy["val_f1"])
     plt.grid()
     plt.title('val_F1')
     plt.xlabel('Epoch')
-    plt.legend(['without MSDrop', 'with MSDropLogits'], loc='best', prop={'size': 4})
+    plt.legend(['without MSDrop', 'with MSDropLogits', 'with MSDropLoss'], loc='best', prop={'size': 4})
 
     plt.suptitle("Model Metrics")
 
@@ -252,7 +267,7 @@ def visualize_PRF_alpha():
     plt.grid()
     plt.title('loss')
     plt.xlabel('Epoch')
-    plt.legend(['0.0', '0.3', '1.0','2.0','5.0'], loc='best', prop={'size': 4})
+    plt.legend(['0.0', '0.3', '1.0', '2.0', '5.0'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 0])
     plt.plot(history_n["val_loss"])
@@ -263,7 +278,7 @@ def visualize_PRF_alpha():
     plt.grid()
     plt.title('val_loss')
     plt.xlabel('Epoch')
-    plt.legend(['0.0', '0.3', '1.0','2.0','5.0'], loc='best', prop={'size': 4})
+    plt.legend(['0.0', '0.3', '1.0', '2.0', '5.0'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[0, 1])
     plt.plot(history_n["acc"])
@@ -274,7 +289,7 @@ def visualize_PRF_alpha():
     plt.grid()
     plt.title('acc')
     plt.xlabel('Epoch')
-    plt.legend(['0.0', '0.3', '1.0','2.0','5.0'], loc='best', prop={'size': 4})
+    plt.legend(['0.0', '0.3', '1.0', '2.0', '5.0'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 1])
     plt.plot(history_n["val_acc"])
@@ -285,7 +300,7 @@ def visualize_PRF_alpha():
     plt.grid()
     plt.title('val_acc')
     plt.xlabel('Epoch')
-    plt.legend(['0.0', '0.3', '1.0','2.0','5.0'], loc='best', prop={'size': 4})
+    plt.legend(['0.0', '0.3', '1.0', '2.0', '5.0'], loc='best', prop={'size': 4})
 
     plt.suptitle("Model Metrics")
 
@@ -303,7 +318,7 @@ def visualize_PRF_alpha():
     plt.grid()
     plt.title('precision')
     plt.xlabel('Epoch')
-    plt.legend(['0.0', '0.3', '1.0','2.0','5.0'], loc='best', prop={'size': 4})
+    plt.legend(['0.0', '0.3', '1.0', '2.0', '5.0'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 0])
     plt.plot(history_n["val_precision"])
@@ -314,7 +329,7 @@ def visualize_PRF_alpha():
     plt.grid()
     plt.title('val_precision')
     plt.xlabel('Epoch')
-    plt.legend(['0.0', '0.3', '1.0','2.0','5.0'], loc='best', prop={'size': 4})
+    plt.legend(['0.0', '0.3', '1.0', '2.0', '5.0'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[0, 1])
     plt.plot(history_n["recall"])
@@ -325,7 +340,7 @@ def visualize_PRF_alpha():
     plt.grid()
     plt.title('recall')
     plt.xlabel('Epoch')
-    plt.legend(['0.0', '0.3', '1.0','2.0','5.0'], loc='best', prop={'size': 4})
+    plt.legend(['0.0', '0.3', '1.0', '2.0', '5.0'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 1])
     plt.plot(history_n["val_recall"])
@@ -336,7 +351,7 @@ def visualize_PRF_alpha():
     plt.grid()
     plt.title('val_recall')
     plt.xlabel('Epoch')
-    plt.legend(['0.0', '0.3', '1.0','2.0','5.0'], loc='best', prop={'size': 4})
+    plt.legend(['0.0', '0.3', '1.0', '2.0', '5.0'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[0, 2])
     plt.plot(history_n["f1"])
@@ -347,7 +362,7 @@ def visualize_PRF_alpha():
     plt.grid()
     plt.title('f1')
     plt.xlabel('Epoch')
-    plt.legend(['0.0', '0.3', '1.0','2.0','5.0'], loc='best', prop={'size': 4})
+    plt.legend(['0.0', '0.3', '1.0', '2.0', '5.0'], loc='best', prop={'size': 4})
 
     plt.subplot(gs[1, 2])
     plt.plot(history_n["val_f1"])
@@ -358,7 +373,7 @@ def visualize_PRF_alpha():
     plt.grid()
     plt.title('val_f1')
     plt.xlabel('Epoch')
-    plt.legend(['0.0', '0.3', '1.0','2.0','5.0'], loc='best', prop={'size': 4})
+    plt.legend(['0.0', '0.3', '1.0', '2.0', '5.0'], loc='best', prop={'size': 4})
 
     plt.suptitle("Model Metrics")
 
@@ -368,5 +383,5 @@ def visualize_PRF_alpha():
 
 if __name__ == "__main__":
     visualize_FT_PRF()
-    visualize_PRF()
+    # visualize_PRF()
     # visualize_PRF_alpha()
